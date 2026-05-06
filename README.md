@@ -1,24 +1,25 @@
 # GenAI Hackathon Project 🚀
 
-A hackathon project built to solve real-world problems using modern web technologies.  
-This project was developed during a hackathon to showcase innovation, teamwork, and practical implementation.
+GenSecureAI is a Generative AI-based project developed during a hackathon. The platform focuses on using AI to simplify tasks, improve user interaction, and demonstrate practical applications of modern AI technologies.
 
----
+## Features
+- AI-powered responses
+- Interactive user interface
+- Smart content generation
+- Real-time processing
+- User-friendly design
 
-## 📌 Features
+## Tech Stack
+- Python
+- Flask
+- HTML
+- CSS
+- JavaScript
 
-- User-friendly interface
-- Fast and responsive design
-- Real-time functionality
-- Clean UI/UX
-- Scalable project structure
+## Installation
 
----
-
-## 🛠️ Tech Stack
-
-- Frontend: HTML, CSS, JavaScript
-- Backend: Node.js
-- Database: MongoDB / Firebase
-- Other Tools: Git, GitHub, APIs
-
+```bash
+git clone https://github.com/harshshrii-2000/GenSecureAI.git
+cd GenSecureAI
+pip install -r requirements.txt
+python app.py
