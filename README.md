@@ -1,4 +1,4 @@
-# GenAI Hackathon Project 🚀
+# GenSecure-AI
 
 GenSecureAI is a Generative AI-based project developed during a hackathon. The platform focuses on using AI to simplify tasks, improve user interaction, and demonstrate practical applications of modern AI technologies.
 
