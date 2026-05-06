@@ -18,7 +18,7 @@ This project was developed during a hackathon to showcase innovation, teamwork, 
 ## 🛠️ Tech Stack
 
 - Frontend: HTML, CSS, JavaScript
-- Backend: Node.js / Express (if used)
-- Database: MongoDB / Firebase / MySQL (if used)
+- Backend: Node.js
+- Database: MongoDB / Firebase
 - Other Tools: Git, GitHub, APIs
-- 
+
