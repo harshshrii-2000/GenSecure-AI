@@ -22,9 +22,3 @@ This project was developed during a hackathon to showcase innovation, teamwork, 
 - Database: MongoDB / Firebase
 - Other Tools: Git, GitHub, APIs
 
-
-
-```md
-![GitHub stars](https://img.shields.io/github/stars/harshshrii-2000/First-Hackathon)
-![GitHub forks](https://img.shields.io/github/forks/harshshrii-2000/First-Hackathon)
-![License](https://img.shields.io/github/license/harshshrii-2000/First-Hackathon)
