@@ -1,0 +1,72 @@
+/* Reset + Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body fallback (Tailwind ke saath safe) */
+body {
+    background-color: #020617;
+    color: #e5e7eb;
+}
+
+/* Inputs & Select */
+input, select {
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.4);
+}
+
+/* Buttons */
+button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Output box */
+#output {
+    min-height: 200px;
+    line-height: 1.6;
+}
+
+/* Scrollbar */
+#output::-webkit-scrollbar {
+    width: 6px;
+}
+
+#output::-webkit-scrollbar-track {
+    background: #020617;
+}
+
+#output::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 10px;
+}
+
+#output::-webkit-scrollbar-thumb:hover {
+    background: #38bdf8;
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    .max-w-4xl {
+        padding: 1.5rem;
+    }
+}
