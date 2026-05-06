@@ -21,12 +21,4 @@ This project was developed during a hackathon to showcase innovation, teamwork, 
 - Backend: Node.js / Express (if used)
 - Database: MongoDB / Firebase / MySQL (if used)
 - Other Tools: Git, GitHub, APIs
-
----
-
-## 📷 Screenshots
-
-Add your project screenshots here.
-
-```md
-![Screenshot](image-link)
+- 
