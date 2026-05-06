@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LearnSphere - AI ML Tutor</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-slate-900 via-black-900 to-black text-white min-h-screen flex items-center justify-center p-6">
+
+    <div class="max-w-4xl w-full bg-white/10 backdrop-blur-xl rounded-2xl shadow-2xl p-8 border border-white/10">
+
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-extrabold text-red-400">LearnSphere</h1>
+            <p class="text-gray-300 mt-2 text-lg">
+                Your AI-Powered Machine Learning Learning Assistant
+            </p>
+        </div>
+
+        <!-- Input Section -->
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+            
+            <div>
+                <label class="block text-sm font-semibold text-red-200 mb-2">Enter ML Topic</label>
+                <input 
+                    type="text" 
+                    id="topic"
+                    placeholder="e.g. Linear Regression"
+                    class="w-full p-3 rounded-xl bg-gray-900 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-red-400 text-white"
+                />
+            </div>
+
+            <div>
+                <label class="block text-sm font-semibold text-gray-200 mb-2">Select Difficulty Level</label>
+                <select 
+                    id="level"
+                    class="w-full p-3 rounded-xl bg-gray-900 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 text-white"
+                >
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                </select>
+            </div>
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex justify-center gap-4 mb-8">
+            <button 
+                onclick="generateContent()"
+                class="px-8 py-3 bg-pink-500 hover:bg-blue-600 text-black font-bold rounded-xl shadow-lg transition duration-300"
+            >
+                Generate Explanation ✨
+            </button>
+
+            <button 
+                onclick="generateQuiz()"
+                class="px-8 py-3 bg-yellow-500 hover:bg-green-600 text-white font-bold rounded-xl shadow-lg transition duration-300"
+            >
+                Generate Quiz 📝
+            </button>
+        </div>
+
+        <!-- Output Section -->
+        <div class="bg-gray-950 border border-gray-700 rounded-2xl p-6 shadow-inner">
+            <h2 class="text-2xl font-bold text-green-400 mb-4">AI Output / Quiz</h2>
+            <pre id="output" class="whitespace-pre-wrap text-gray-200 text-sm leading-relaxed">
+Your result will appear here...
+            </pre>
+        </div>
+
+        <!-- Footer -->
+        <p class="text-center text-gray-500 text-sm mt-6">
+            Built with Flask + Gemini AI | Hackathon Project 💡
+        </p>
+
+    </div>
+
+    <script>
+        async function generateContent() {
+            let topic = document.getElementById("topic").value;
+            let level = document.getElementById("level").value;
+
+            document.getElementById("output").innerText = "Generating explanation... Please wait ⏳";
+
+            let response = await fetch("/generate", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ topic: topic, level: level })
+            });
+
+            let data = await response.json();
+            document.getElementById("output").innerText = data.result;
+        }
+
+        async function generateQuiz() {
+            let topic = document.getElementById("topic").value;
+            let level = document.getElementById("level").value;
+
+            document.getElementById("output").innerText = "Generating quiz... Please wait 📝⏳";
+
+            let response = await fetch("/quiz", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ topic: topic, level: level })
+            });
+
+            let data = await response.json();
+            document.getElementById("output").innerText = data.quiz;
+        }
+    </script>
+
+</body>
+</html>
